@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; }
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    
+    & .timer {
+        font-size: 64px;
+        color: #fff;
+    }
+}
