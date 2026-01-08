@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; }
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+
+    & input {
+        all: unset;
+        border: 2.5px solid #dfdfdf;
+        width: 10px;
+        padding: 25px;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+        transition: .25s;
+        caret-color: transparent;
+
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    & button {
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2.5px solid #dfdfdf;
+        border-radius: 10px;
+
+        &.disabled {
+            opacity: 0.33;
+            pointer-events: none;
+        }
+    }
+}
