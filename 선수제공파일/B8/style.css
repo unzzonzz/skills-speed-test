@@ -14,4 +14,16 @@
             border-radius: 5px;
         }
     }
+
+    & .message {
+        cursor: pointer;
+        
+        &.success {
+            color: green;
+        }
+        
+        &.fail {
+            color: red;
+        }
+    }
 }
