@@ -1,0 +1,3 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; }
+
+#app { display: flex; flex-direction: column; align-items: center; gap: 25px; width: fit-content; padding: 50px 0; margin: 0 auto; & .input-group { display: flex; gap: 10px; & input { padding: 10px; } & button { padding: 10px 20px; cursor: pointer; } } & ul { display: flex; flex-direction: column; gap: 5px; width: 100%; & li { display: flex; justify-content: space-between; align-items: center; background: #f3f3f3; padding: 10px; & button { padding: 5px 10px; border: none; background: #ff3a3a; color: #fff; cursor: pointer; } } } }

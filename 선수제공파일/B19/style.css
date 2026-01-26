@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; }
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 400px;
+
+    & .c-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .btn {
+            padding: 10px;
+            background: #f6f6f6;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+    }
+
+    & .days-of-the-week {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+
+        & .day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+    }
+
+    & .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+
+        & .day {
+            padding: 10px;
+            aspect-ratio: 1;
+            background: #f6f6f6;
+            font-size: 14px;
+            border-radius: 5px;
+
+            &:nth-child(7n + 1), &:nth-child(7n) {
+                color: #8e8e8e;
+            }
+
+            &.today {
+                border: 1.5px solid #000;
+            }
+        }
+    }
+}
+
