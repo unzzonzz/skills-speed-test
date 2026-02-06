@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List </title>
     <style>
@@ -16,7 +19,7 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -107,7 +110,7 @@
         }
 
         .todo-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
 
@@ -237,10 +240,11 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>📋 Todo List</h1>
-        
+
         <div class="stats" id="stats">
             <div class="stat-item">
                 <div class="stat-number" id="totalCount">0</div>
@@ -270,92 +274,92 @@
         <div id="error" class="error" style="display: none;"></div>
 
         <div class="todo-list" id="todoList">
-                <div class="todo-item ">
-                    <div class="todo-header">
-                        <h3 class="todo-title">{title}</h3>
-                        <div class="todo-badges">
-                            <span class="badge priority-high">높음</span>
-                            <span class="badge status-badge">진행중</span>
-                        </div>
-                    </div>
-                    <p class="todo-description">{description}</p>
-                    <div class="todo-footer">
-                        <div class="date-info">
-                            <span>📅 마감: {dueDate}</span>
-                            <span>📝 생성: {createdAt}</span>
-                        </div>
+            <div class="todo-item ">
+                <div class="todo-header">
+                    <h3 class="todo-title">{title}</h3>
+                    <div class="todo-badges">
+                        <span class="badge priority-high">높음</span>
+                        <span class="badge status-badge">진행중</span>
                     </div>
                 </div>
-            
-                <div class="todo-item completed">
-                    <div class="todo-header">
-                        <h3 class="todo-title">{title}</h3>
-                        <div class="todo-badges">
-                            <span class="badge priority-medium">보통</span>
-                            <span class="badge status-badge">완료</span>
-                        </div>
-                    </div>
-                    <p class="todo-description">{description}</p>
-                    <div class="todo-footer">
-                        <div class="date-info">
-                            <span>📅 마감: {dueDate}</span>
-                            <span>📝 생성: {createdAt}</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="todo-item ">
-                    <div class="todo-header">
-                        <h3 class="todo-title">{title}</h3>
-                        <div class="todo-badges">
-                            <span class="badge priority-medium">보통</span>
-                            <span class="badge status-badge">진행중</span>
-                        </div>
-                    </div>
-                    <p class="todo-description">{description}</p>
-                    <div class="todo-footer">
-                        <div class="date-info">
-                            <span>📅 마감: {dueDate}</span>
-                            <span>📝 생성: {createdAt}</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="todo-item ">
-                    <div class="todo-header">
-                        <h3 class="todo-title">{title}</h3>
-                        <div class="todo-badges">
-                            <span class="badge priority-high">높음</span>
-                            <span class="badge status-badge">진행중</span>
-                        </div>
-                    </div>
-                    <p class="todo-description">{description}</p>
-                    <div class="todo-footer">
-                        <div class="date-info">
-                            <span>📅 마감: {dueDate}</span>
-                            <span>📝 생성: {createdAt}</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="todo-item ">
-                    <div class="todo-header">
-                        <h3 class="todo-title">{title}</h3>
-                        <div class="todo-badges">
-                            <span class="badge priority-low">낮음</span>
-                            <span class="badge status-badge">진행중</span>
-                        </div>
-                    </div>
-                    <p class="todo-description">{description}</p>
-                    <div class="todo-footer">
-                        <div class="date-info">
-                            <span>📅 마감: {dueDate}</span>
-                            <span>📝 생성: {createdAt}</span>
-                        </div>
+                <p class="todo-description">{description}</p>
+                <div class="todo-footer">
+                    <div class="date-info">
+                        <span>📅 마감: {dueDate}</span>
+                        <span>📝 생성: {createdAt}</span>
                     </div>
                 </div>
             </div>
+
+            <div class="todo-item completed">
+                <div class="todo-header">
+                    <h3 class="todo-title">{title}</h3>
+                    <div class="todo-badges">
+                        <span class="badge priority-medium">보통</span>
+                        <span class="badge status-badge">완료</span>
+                    </div>
+                </div>
+                <p class="todo-description">{description}</p>
+                <div class="todo-footer">
+                    <div class="date-info">
+                        <span>📅 마감: {dueDate}</span>
+                        <span>📝 생성: {createdAt}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-item ">
+                <div class="todo-header">
+                    <h3 class="todo-title">{title}</h3>
+                    <div class="todo-badges">
+                        <span class="badge priority-medium">보통</span>
+                        <span class="badge status-badge">진행중</span>
+                    </div>
+                </div>
+                <p class="todo-description">{description}</p>
+                <div class="todo-footer">
+                    <div class="date-info">
+                        <span>📅 마감: {dueDate}</span>
+                        <span>📝 생성: {createdAt}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-item ">
+                <div class="todo-header">
+                    <h3 class="todo-title">{title}</h3>
+                    <div class="todo-badges">
+                        <span class="badge priority-high">높음</span>
+                        <span class="badge status-badge">진행중</span>
+                    </div>
+                </div>
+                <p class="todo-description">{description}</p>
+                <div class="todo-footer">
+                    <div class="date-info">
+                        <span>📅 마감: {dueDate}</span>
+                        <span>📝 생성: {createdAt}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-item ">
+                <div class="todo-header">
+                    <h3 class="todo-title">{title}</h3>
+                    <div class="todo-badges">
+                        <span class="badge priority-low">낮음</span>
+                        <span class="badge status-badge">진행중</span>
+                    </div>
+                </div>
+                <p class="todo-description">{description}</p>
+                <div class="todo-footer">
+                    <div class="date-info">
+                        <span>📅 마감: {dueDate}</span>
+                        <span>📝 생성: {createdAt}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-</body></html>
+    <script src="script.js"></script>
+</body>
+</html>
