@@ -22,8 +22,15 @@ function saveFavorites() {
 }
 
 function loadFavorites() {
+  const currentState = store.getState()
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
-  handleAddToIsFavoritesKey(favorites)
+  const newItems = currentState.items.map(item => {
+    if (favorites.includes(item.id)) return { ...item, isFavorites: true }
+
+    return item
+  })
+
+  store.setState({ items: newItems })
 }
 
 async function loadData() {

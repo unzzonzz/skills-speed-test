@@ -34,6 +34,7 @@
         cursor: pointer;
         border: 2.5px solid #dfdfdf;
         border-radius: 10px;
+        transition: .25s;
 
         &.disabled {
             opacity: 0.33;
