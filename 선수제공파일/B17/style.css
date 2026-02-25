@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.drop-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  border: 2.5px dotted;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .25s;
+
+  &.hovering {
+    border: 2.5px dotted rgb(0, 85, 255);
+    background: rgba(0, 85, 255, 0.125);
+    color: rgb(0, 85, 255);
+  }
+}
