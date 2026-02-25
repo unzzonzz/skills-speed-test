@@ -17,17 +17,17 @@ function formatTime(elapsedTime) {
 $$('button')[0].addEventListener('click', () => {
   if (!isStarted) {
     startTime = Date.now() - (previousTime || 0)
-    console.log(startTime);
     isStarted = true
   } else {
     previousTime = Date.now() - startTime
-    console.log(previousTime);
     isStarted = false
   }
 })
 
 $$('button')[1].addEventListener('click', () => {
   isStarted = false
+  startTime = Date.now()
+  $('.timer').textContent = '00:00:00'
 })
 
 setInterval(() => {
