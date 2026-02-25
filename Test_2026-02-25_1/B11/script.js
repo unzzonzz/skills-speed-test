@@ -26,7 +26,8 @@ $$('button')[0].addEventListener('click', () => {
 
 $$('button')[1].addEventListener('click', () => {
   isStarted = false
-  startTime = Date.now()
+  startTime = null
+  previousTime = null
   $('.timer').textContent = '00:00:00'
 })
 
