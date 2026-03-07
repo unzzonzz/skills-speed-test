@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #f8f8f8;
+}
+
+.group.horizontal {
+    display: flex;
+    gap: 25px;
+}
+
+canvas {
+    background: #fff;
+    border: 1.5px solid;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 15px;
+    cursor: pointer;
+}
