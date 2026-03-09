@@ -13,3 +13,5 @@ function checkStrength(password) {
   if (password.length >= 6 && /[0-9]/.test(password) || /[A-Z]/.test(password)) return { level: '보통', color: 'orange' }
   return { level: '', color: 'black' }
 }
+
+console.log(object);
