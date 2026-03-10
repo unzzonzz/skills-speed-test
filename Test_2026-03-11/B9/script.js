@@ -16,8 +16,16 @@ async function loadData() {
   const datas = await res.json()
   const newDatas = datas.map(data => ({ ...data, isFavorite: false }))
 
-  store.setState({ datas: newDatas })
+  store.setState({ datas: getLocalStorageData() || newDatas })
   render(store.getState())
+}
+
+function setLocalStorageData() {
+  localStorage.setItem('datas', JSON.stringify(store.getState().datas))
+}
+
+function getLocalStorageData() {
+  return JSON.parse(localStorage.getItem('datas'))
 }
 
 function render(state) {
@@ -27,17 +35,28 @@ function render(state) {
     const li = document.createElement('li')
     li.innerHTML = `
       <div class="group vertical">
-        <div class="name">${ data.name }</div>
-        <div class="desc">${ data.desc }</div>
+        <div class="name">${data.name}</div>
+        <div class="desc">${data.desc}</div>
       </div>
-      <div class="icon">⭐</div>
+      <div class="icon">☆</div>
     `
-    if (data.isFavorite) li.classList.add('favorite')
+    if (data.isFavorite) {
+      li.innerHTML = `
+        <div class="group vertical">
+          <div class="name">${data.name}</div>
+          <div class="desc">${data.desc}</div>
+        </div>
+        <div class="icon">★</div>
+      `
+      li.classList.add('favorite')
+    }
 
     li.addEventListener('click', () => {
       data.isFavorite = !data.isFavorite
+
       store.setState({ data: state.datas })
       render(state)
+      setLocalStorageData()
     })
 
     ul.append(li)
