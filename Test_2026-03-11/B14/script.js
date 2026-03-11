@@ -1,0 +1,83 @@
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
+const legend = document.querySelector('.legend')
+
+function createState(initialState) {
+    let state = initialState
+
+    return {
+        getState: () => state,
+        setState: (newState) => {
+            state = { ...state, ...newState }
+        }
+    }
+}
+
+function render(state) {
+    let previousEndAngle = 0
+    legend.innerHTML = ''
+
+    state.datas.forEach(data => {
+        ctx.beginPath()
+        ctx.moveTo(250, 250)
+        ctx.arc(250, 250, 200, previousEndAngle, previousEndAngle + getPercent(data.value) * Math.PI * 2)
+        ctx.fillStyle = data.color
+        ctx.fill()
+        ctx.closePath()
+
+        previousEndAngle = previousEndAngle + getPercent(data.value) * Math.PI * 2
+
+        const div = document.createElement('div')
+        div.classList.add('legend-item')
+        div.innerHTML = `
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: ${data.color}"></div>
+                <span>${data.label} (${Math.round(getPercent(data.value) * 100)}%)</span>
+            </div>
+        `
+
+        legend.append(div)
+    })
+}
+
+addButton.addEventListener('click', () => {
+    if (!labelInput.value || !valueInput.value) return alert('값을 모두 입력해주세요!')
+
+    store.setState({ datas: [...store.getState().datas, {
+        label: labelInput.value,
+        value: Number(valueInput.value),
+        color: getRandomColor()
+    }] })
+
+    render(store.getState())
+    labelInput.value = ''
+    valueInput.value = ''
+})
+
+clearButton.addEventListener('click', () => {
+    store.setState({ datas: [] })
+    ctx.clearRect(0, 0, 500, 500)
+    render(store.getState())
+})
+
+function getRandomColor() {
+    let color = '#'
+    const str = 'abcdef1234567890'
+
+    for (i = 0; i < 6; i++) color += str[Math.floor(Math.random() * str.length)]
+
+    return color
+}
+
+function getPercent(value) {
+    let sum = 0
+
+    store.getState().datas.forEach(data => sum += data.value)
+    return value / sum
+}
+
+const store = createState({
+    datas: []
+})
+
+render(store.getState())
