@@ -13,6 +13,7 @@ function createState(initialState) {
 }
 
 function render(state) {
+  legend.innerHTML = ''
   let previousEnd = 0
 
   state.datas.forEach(data => {
@@ -23,6 +24,17 @@ function render(state) {
     ctx.fill()
 
     previousEnd = previousEnd + getPercent(data.value) * Math.PI * 2
+
+    const div = document.createElement('div')
+    div.classList.add('legend-item')
+    div.innerHTML = `
+      <div class="legend-item">
+          <div class="legend-color" style="background-color: ${data.color}"></div>
+          <span>${data.label} (${Math.round(getPercent(data.value) * 100)}%)</span>
+      </div>
+    `
+
+    legend.append(div)
   })
 }
 
