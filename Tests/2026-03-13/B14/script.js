@@ -32,6 +32,8 @@ addButton.onclick = () => {
     value: Number(valueInput.value),
     color: getRandomColor()
   }] })
+
+  render(store.getState())
 }
 
 function getRandomColor() {
