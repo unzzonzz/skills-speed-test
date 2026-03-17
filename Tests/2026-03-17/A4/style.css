@@ -1,0 +1,9 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+form {display: flex;flex-direction: column;gap: 10px;width: 500px;padding: 25px;border: 1px solid #dfdfdf;}
+h1 {margin-bottom: 15px;}
+.content-1 {display: flex;flex-direction: column;}
+.text-1 {font-size: 14px;color: #333;}
+input {padding: 10px;border: 1px solid #dfdfdf;}
+button {padding: 10px;margin-top: 15px;border: 1px solid #dfdfdf;cursor: pointer;transition: .1s;}
+button:hover {background: #ddd;}

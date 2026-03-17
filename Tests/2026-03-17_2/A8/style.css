@@ -1,0 +1,28 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+body {background: #f8f8f8;}
+.content-1 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 700px;
+    box-shadow: 0 2px 5px #00000026;
+}
+.content-2 {width: 100%;padding: 25px;background: #333;color: #fff;text-align: center;}
+.content-4 {background: #fff;display: flex;justify-content: space-between;align-items: center;padding: 10px;border-bottom: 1px solid #dfdfdf;}
+.content-5 {display: flex;gap: 5px;}
+.content-6 {display: flex;flex-direction: column;}
+.content-5 .content-6 .text-1 {font-size: 18px;font-weight: bold;}
+.content-5 .content-6 .text-2, .content-6 .text-3 {font-size: 14px;color: #00000099;}
+.content-61 {display: flex;gap: 25px;}
+.content-7 {display: flex;gap: 10px;align-items: center;}
+.content-7 .button {width: 25px;height: 25px;display: flex;justify-content: center;align-items: center;font-size: 12px;border-radius: 5px;border: 1px solid #dfdfdf;align-items: center;}
+.close {width: 25px;height: 25px;border-radius: 25px;display: flex;justify-content: center;align-items: center;background: red;color: #fff;}
+img {width: 50px;height: 50px;object-fit: cover;}
+.content-8 {padding: 20px;}
+.content-11 {background: #fff;display: flex;justify-content: center;align-items: center;gap: 25px;padding: 25px;}
+.content-11 .button {padding: 10px 25px;color: #fff;background: #333;border-radius: 5px;font-size: 14px;font-weight: bold;}
+.content-11 .button:last-child {background: #26bb4b;}
+.content-9 {display: flex;justify-content: space-between;align-items: center;font-size: 14px; margin-bottom: 20px;}
+.content-10 {font-weight: bold;display: flex;justify-content: space-between;align-items: center;border-top: 1px solid #dfdfdf;padding-top: 10px;}

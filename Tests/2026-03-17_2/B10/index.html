@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="500" height="500" style="border: 5px solid"></canvas>
+    <button onclick="location.reload()">지우기</button>
+    <button>저장</button>
+    <script>
+        const canvas = document.querySelector('canvas')
+        const ctx = canvas.getContext('2d')
+        let isDrawing, prevX, prevY = 0
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true
+
+            ;[prevX, prevY] = [e.offsetX, e.offsetY]
+        })
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return
+
+            ctx.beginPath()
+            ctx.moveTo(prevX, prevY)
+            ctx.lineTo(e.offsetX, e.offsetY)
+            ctx.stroke()
+
+            ;[prevX, prevY] = [e.offsetX, e.offsetY]
+        })
+
+        canvas.addEventListener('mouseup', (e) => {
+            isDrawing = false
+        })
+
+        document.querySelectorAll('button')[1].onclick = () => {
+            const a = document.createElement('a')
+            a.href = canvas.toDataURL()
+            a.download = 'sign.png'
+            a.click()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+* {margin: 0;padding: 0;}
+
+.container {display: flex;height: 100vh;justify-content: center;align-items: center; transition: .25s;}
+.toggle {display: flex;padding: 10px;border-radius: 500px;width: 100px;background: #efefef; transition: .25s;}
+.ball {width: 25px;height: 25px;background: #fff;border-radius: 50px;transition: .25s;}
+#s:checked ~ .container {background: #222;}
+#s:checked ~ .container .toggle {background: darkblue;}
+#s:checked ~ .container .ball {background: yellow;transform: translateX(75px);}

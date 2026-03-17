@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To-Do 리스트</h1>
+    <input type="text" placeholder="할 일을 입력하세요"><button>추가</button>
+    <ul>
+    </ul>
+    <script>
+        document.querySelector('button').onclick = () => {
+            const li = document.createElement('li')
+            li.innerHTML = `
+                <span class="text-1">${document.querySelector('input').value}</span>
+            `
+            const button = document.createElement('span')
+            button.textContent = '삭제'
+            button.onclick = () => li.remove()
+            li.append(button)
+            document.querySelector('ul').append(li)
+        }
+    </script>
+</body>
+</html>

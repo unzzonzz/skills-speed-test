@@ -1,0 +1,5 @@
+body {display: flex;justify-content: center;align-items: center;gap: 25px;height: 100vh;}
+.content-1 {position: relative;}
+.text-1, .text-2 {position: absolute;font-size: 12px;background: #fff;border: 1px solid #dfdfdf;padding: 2.5px 5px;white-space: nowrap;z-index: 100;opacity: 0;pointer-events: none;border-radius: 2.5px;}
+.text-1 {left: 50%;top: 0;transform: translate(-50%, -100%);}
+button:hover ~ span {opacity: 1;}

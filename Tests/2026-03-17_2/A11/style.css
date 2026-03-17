@@ -1,0 +1,6 @@
+.bar {display: none;}
+
+@media (max-width: 768px) {
+    a {display: none;}
+    .bar {display: block;}
+}

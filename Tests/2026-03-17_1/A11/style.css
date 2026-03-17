@@ -1,0 +1,9 @@
+* {margin: 0;padding: 0;}
+
+header {display: flex;gap: 25px;}
+p {font-size: 32px;display: none;}
+
+@media (max-width: 768px) {
+    a {display: none;}
+    p {display: block;}
+}

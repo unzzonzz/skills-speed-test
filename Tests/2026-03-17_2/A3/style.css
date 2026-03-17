@@ -1,0 +1,9 @@
+* {margin: 0;padding: 0;transition: .25s;}
+
+.container {height: 100vh;display: flex;justify-content: center;align-items: center;background: #fff;}
+.toggle {padding: 10px;width: 100px;background: #f8f8f8;border-radius: 50px;}
+.ball {width: 25px;height: 25px;border-radius: 50px;background: #fff;}
+
+#asd:checked ~ .container {background: #222;}
+#asd:checked ~ .container .toggle {background: darkblue;}
+#asd:checked ~ .container .ball {background: yellow;transform: translateX(75px);}

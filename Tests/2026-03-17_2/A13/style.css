@@ -1,0 +1,8 @@
+* {margin: 0;padding: 0;}
+body {display: flex;justify-content: center;align-items: center;height: 100vh;}
+.login {display: none;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);background: #fff;flex-direction: column;gap: 10px;border-radius: 5px;border: 1px solid #dfdfdf;}
+#a:checked ~ .login {display: flex;}
+.content-1 {display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #dfdfdf;padding: 10px;}
+.content-2 {display: flex;flex-direction: column;gap: 10px;align-items: center;padding: 10px;}
+.button {padding: 5px 15px;border: 1px solid #dfdfdf;border-radius: 5px;cursor: pointer;}
+.text-2 label {cursor: pointer;}
