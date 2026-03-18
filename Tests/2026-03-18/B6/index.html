@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="boxes"></div>
+    <div class="imgs" style="width: 1200px; height: 200px; border: 1px solid #dfdfdf;"><p>이미지를 여기에 드래그해주세요!</p></div>
+    <button id="reset" onclick="location.reload()">초기화</button>
+    <script>
+        const imgs = ['test1.gif', 'test1.jpg', 'test1.png', 'test2.gif', 'test2.jpg', 'test2.png',]
+
+        let currentImg
+        
+        imgs.forEach(img => {
+            const imgEl = document.createElement('img')
+            imgEl.src = 'test-images/' + img
+            imgEl.draggable
+            imgEl.addEventListener('dragstart', () => currentImg = imgEl)
+            document.querySelector('.boxes').append(imgEl)
+        })
+
+        document.querySelector('.imgs').addEventListener('dragover', (e) => {
+            e.preventDefault()
+        })
+
+        document.querySelector('.imgs').addEventListener('drop', (e) => {
+            if (document.querySelector('p')) document.querySelector('p').remove()
+            e.preventDefault()
+            document.querySelector('.imgs').append(currentImg)
+        })
+    </script>
+</body>
+</html>
