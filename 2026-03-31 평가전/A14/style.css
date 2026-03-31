@@ -1,0 +1,8 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+body {height: 100vh;display: flex;justify-content: center;align-items: center;gap: 25px;}
+button {position: relative;padding: 5px 10px;}
+.tooltip {position: absolute;white-space: nowrap;border-radius: 5px;padding: 5px;background: #fff;border: 1px solid #dfdfdf;font-size: 12px;pointer-events: none;transition: .25s;opacity: 0;}
+.t1 {top: -100%;left: 50%;transform: translate(-50%, 0);}
+.t2 {right: 0;top: 50%;transform: translate(100%, -50%);}
+button:hover .tooltip {opacity: 1;}
+button:focus .tooltip {opacity: 1;}

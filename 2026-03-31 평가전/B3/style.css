@@ -1,0 +1,4 @@
+* {margin: 0;padding: 0;}
+
+body {position: relative;height: 100vh;}
+.square {width: 100px;height: 100px;background: red;position: absolute;transform: translate(-50%, -50%);}

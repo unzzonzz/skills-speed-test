@@ -1,0 +1,12 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {display: flex;flex-direction: column;align-items: center;padding: 25px;background: #f8f8f8;}
+h1 {margin-bottom: 25px;}
+.notices {width: 750px;background: #fff;border-radius: 10px;box-shadow: 0 2px 5px #00000026;}
+.notice {display: flex;justify-content: space-between;align-items: center;padding: 15px;border-bottom: 1px solid #dfdfdf;}
+.notice:last-child {border-bottom: none;}
+.group-1 {display: flex;gap: 15px;align-items: center;}
+.text-1 {padding: 5px 25px;background: rgb(0, 89, 255);color: #fff;font-size: 12px;font-weight: bold;border-radius: 50px;}
+.text-1.a {background: rgb(228, 8, 8);}
+.text-2 {font-weight: bold;}
+.text-3 {font-size: 12px;color: #00000099;}

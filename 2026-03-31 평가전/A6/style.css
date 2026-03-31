@@ -1,0 +1,11 @@
+footer {background: #3b4a64;}
+.group-1 {display: flex;justify-content: space-between;align-items: center;padding: 50px 10px;border-bottom: 1px solid #ffffff26;}
+.group-1 .group-2 {display: flex;flex-direction: column;gap: 10px;}
+.group-1 .group-2 .text-1 {font-size: 24px;font-weight: bold;color: rgb(95, 183, 255);}
+.group-1 .group-2 .text-2 {font-size: 14px;color: #ffffff99;}
+.group-1 .group-3 {display: flex;gap: 25px;margin-right: 50px;}
+.group-1 .group-4 {display: flex;flex-direction: column;gap: 10px;font-size: 15px;font-weight: bold;color: #fff;}
+.group-1 .group-5 {display: flex;flex-direction: column;gap: 5px;font-size: 14px;color: #ffffff99;font-weight: normal;}
+.group-6 {display: flex;justify-content: space-between;align-items: center;padding: 10px;}
+.group-6 .text-1 {color: #ffffff99;font-size: 14px;}
+.group-6 .text-2 {color: #ffffff99;font-size: 14px;}
